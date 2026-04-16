@@ -24,31 +24,64 @@ export default function Home() {
   const products = [
     {
       name: "Maroon Festive Suit",
-      image: "https://via.placeholder.com/300",
+      image: "/p1.jpg",
       price: "₹2199",
     },
     {
-      name: "Blue Printed Kurta",
-      image: "https://via.placeholder.com/300",
+      name: "Blue Cotton Kurta",
+      image: "/p2.jpg",
       price: "₹1199",
+    },
+    {
+      name: "Green Ethnic Set",
+      image: "/p3.jpg",
+      price: "₹2499",
+    },
+    {
+      name: "Modern Co-ord Set",
+      image: "/p4.jpg",
+      price: "₹1899",
     },
   ];
 
   return (
-    <div style={{ fontFamily: "serif", background: "#f8f5f0", padding: "20px" }}>
-      <h1 style={{ textAlign: "center" }}>Cotton Konnect</h1>
-      <p style={{ textAlign: "center" }}>
-        LETS EXPERIENCE A NEW WAY OF SHOPPING
-      </p>
-
-      <div style={{ textAlign: "center", margin: "20px" }}>
-        Exhibition in {timeLeft.days}d {timeLeft.hours}h
+    <div style={{ fontFamily: "Georgia, serif", background: "#f5efe6" }}>
+      
+      {/* HEADER */}
+      <div style={{ textAlign: "center", padding: "30px" }}>
+        <h1 style={{ fontSize: "40px", color: "#bfa46f" }}>
+          Cotton Konnect
+        </h1>
+        <p style={{ letterSpacing: "2px" }}>
+          LETS EXPERIENCE A NEW WAY OF SHOPPING
+        </p>
       </div>
 
-      <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
+      {/* HERO BANNER */}
+      <div style={{ textAlign: "center" }}>
+        <img src="/p1.jpg" style={{ width: "90%", borderRadius: "10px" }} />
+      </div>
+
+      {/* COUNTDOWN */}
+      <div style={{ textAlign: "center", margin: "30px", fontSize: "20px" }}>
+        Exhibition in {timeLeft.days} days {timeLeft.hours} hours
+      </div>
+
+      {/* PRODUCTS */}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gap: "20px",
+        padding: "20px"
+      }}>
         {products.map((p, i) => (
-          <div key={i} style={{ border: "1px solid #ddd", padding: "10px" }}>
-            <img src={p.image} width="200" />
+          <div key={i} style={{
+            background: "white",
+            padding: "15px",
+            borderRadius: "10px",
+            textAlign: "center"
+          }}>
+            <img src={p.image} style={{ width: "100%" }} />
             <h3>{p.name}</h3>
             <p>{p.price}</p>
 
@@ -56,11 +89,39 @@ export default function Home() {
               href={`https://wa.me/919082780235?text=I want ${p.name}`}
               target="_blank"
             >
-              <button>Order on WhatsApp</button>
+              <button style={{
+                background: "#bfa46f",
+                color: "white",
+                border: "none",
+                padding: "10px",
+                cursor: "pointer"
+              }}>
+                Order on WhatsApp
+              </button>
             </a>
           </div>
         ))}
       </div>
+
+      {/* INSTAGRAM */}
+      <div style={{ textAlign: "center", padding: "40px" }}>
+        <h2>Follow Us on Instagram</h2>
+        <iframe
+          src="https://www.instagram.com/cottonect_ck/embed"
+          width="320"
+          height="400"
+        ></iframe>
+      </div>
+
+      {/* CONTACT */}
+      <div style={{ textAlign: "center", padding: "20px" }}>
+        <h3>Visit Us</h3>
+        <p>
+          901 Laxmi baug estate, phadke road,  
+          Dombivli east 421201
+        </p>
+      </div>
+
     </div>
   );
 }
