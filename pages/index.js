@@ -147,26 +147,56 @@ export default function Home() {
         {/* BOOK EXHIBITION */}
         <div style={{ padding: "40px 20px", textAlign: "center" }}>
           <h2>Book Exhibition Visit</h2>
-          <form action="https://formspree.io/f/your-id" method="POST">
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
             <input
+              id="booking-name"
               placeholder="Your Name"
-              name="name"
-              required
-              style={{ padding: "8px 14px", borderRadius: "6px", border: "1px solid #ccc", marginBottom: "12px", width: "260px", display: "block", margin: "0 auto 12px" }}
+              style={{ padding: "8px 14px", borderRadius: "6px", border: "1px solid #ccc", width: "260px" }}
             />
             <input
-              placeholder="Phone Number"
-              name="phone"
-              required
-              style={{ padding: "8px 14px", borderRadius: "6px", border: "1px solid #ccc", marginBottom: "12px", width: "260px", display: "block", margin: "0 auto 12px" }}
+              id="booking-phone"
+              placeholder="Your Phone Number"
+              style={{ padding: "8px 14px", borderRadius: "6px", border: "1px solid #ccc", width: "260px" }}
+            />
+            <input
+              id="booking-date"
+              type="date"
+              style={{ padding: "8px 14px", borderRadius: "6px", border: "1px solid #ccc", width: "260px" }}
+            />
+            <input
+              id="booking-time"
+              type="time"
+              style={{ padding: "8px 14px", borderRadius: "6px", border: "1px solid #ccc", width: "260px" }}
             />
             <button
-              type="submit"
-              style={{ background: "#bfa46f", color: "white", border: "none", padding: "10px 28px", borderRadius: "8px", cursor: "pointer", fontWeight: "bold" }}
+              onClick={() => {
+                const name = document.getElementById("booking-name").value.trim();
+                const phone = document.getElementById("booking-phone").value.trim();
+                const date = document.getElementById("booking-date").value;
+                const time = document.getElementById("booking-time").value;
+                if (!name || !phone || !date || !time) {
+                  alert("Please fill in all fields before booking.");
+                  return;
+                }
+                const formattedDate = new Date(date).toLocaleDateString("en-IN", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+                const formattedTime = new Date(`1970-01-01T${time}`).toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" });
+                const message = `Hello Cotton Konnect! 🌸\n\nI'd like to book an exhibition visit slot.\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n📅 Date: ${formattedDate}\n🕐 Time: ${formattedTime}\n\nPlease confirm my appointment. Thank you!`;
+                window.open(`https://wa.me/919082780235?text=${encodeURIComponent(message)}`);
+              }}
+              style={{
+                background: "#25D366",
+                color: "white",
+                border: "none",
+                padding: "12px 28px",
+                borderRadius: "8px",
+                cursor: "pointer",
+                fontWeight: "bold",
+                fontSize: "15px"
+              }}
             >
-              Book Slot
+              📅 Book via WhatsApp
             </button>
-          </form>
+          </div>
         </div>
 
       </div>
