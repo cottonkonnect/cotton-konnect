@@ -1,3 +1,4 @@
+import Script from "next/script";
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
@@ -17,7 +18,8 @@ export default function Home() {
         });
       }
     }, 1000);
-
+<>
+  <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
     return () => clearInterval(timer);
   }, []);
 
@@ -112,9 +114,14 @@ export default function Home() {
       </div>
 
       {/* INSTAGRAM */}
-      <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-63a4bd68-25c1-4cd8-9fab-17e05369e6bc" data-elfsight-app-lazy></div>
+ <div style={{ textAlign: "center", padding: "40px" }}>
+  <h2>Follow Us on Instagram</h2>
+
+  <div
+    className="elfsight-app-63a4bd68-25c1-4cd8-9fab-17e05369e6bc"
+    data-elfsight-app-lazy
+  ></div>
+</div>
 
       {/* CONTACT */}
       <div style={{ textAlign: "center", padding: "20px" }}>
