@@ -37,7 +37,7 @@ export default function Home() {
           <img
             src="/logo.png"
             alt="Cotton Konnect"
-            style={{ width: "1440px", height: "auto" }}
+            style={{ width: "216px", height: "auto" }}
           />
           <p style={{ letterSpacing: "2px", fontSize: "11px", color: "#888", margin: "6px 0 0" }}>
             LETS EXPERIENCE A NEW WAY OF SHOPPING
