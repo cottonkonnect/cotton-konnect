@@ -112,11 +112,9 @@ export default function Home() {
       </div>
 
       {/* INSTAGRAM */}
-      <div style={{ textAlign: "center", padding: "40px" }}>
-        <h2>Follow Us on Instagram</h2>
-<div class="elfsight-app-XXXX"></div>
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-      </div>
+      <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-63a4bd68-25c1-4cd8-9fab-17e05369e6bc" data-elfsight-app-lazy></div>
 
       {/* CONTACT */}
       <div style={{ textAlign: "center", padding: "20px" }}>
