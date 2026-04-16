@@ -106,11 +106,8 @@ export default function Home() {
       {/* INSTAGRAM */}
       <div style={{ textAlign: "center", padding: "40px" }}>
         <h2>Follow Us on Instagram</h2>
-        <iframe
-          src="https://www.instagram.com/cottonect_ck/embed"
-          width="320"
-          height="400"
-        ></iframe>
+<div class="elfsight-app-XXXX"></div>
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
       </div>
 
       {/* CONTACT */}
