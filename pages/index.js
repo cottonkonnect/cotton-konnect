@@ -104,9 +104,9 @@ const products = [
           <p>901 Laxmi baug estate, phadke road, Dombivli east 421201</p>
         </div>
 
-        {/* BOOK EXHIBITION */}
+        {/* BOOK STUDIO APPOINTMENT */}
         <div style={{ padding: "40px", textAlign: "center" }}>
-          <h2>Book Exhibition Visit</h2>
+          <h2>Book Studio Visit</h2>
           <form action="https://formspree.io/f/your-id" method="POST">
             <input placeholder="Your Name" name="name" required /><br /><br />
             <input placeholder="Phone Number" name="phone" required /><br /><br />
