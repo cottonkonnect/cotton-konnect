@@ -19,12 +19,12 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  const products = [
-    { name: "Maroon Festive Suit", image: "/p1.jpg", price: "₹2199" },
-    { name: "Blue Cotton Kurta", image: "/p2.jpg", price: "₹1199" },
-    { name: "Green Ethnic Set", image: "/p3.jpg", price: "₹2499" },
-    { name: "Modern Co-ord Set", image: "/p4.jpg", price: "₹1899" },
-  ];
+const products = [
+  { name: "Maroon Festive Suit", image: "/p1.png", price: "₹2199" },
+  { name: "Blue Cotton Kurta",   image: "/p2.jpeg", price: "₹1199" },
+  { name: "Green Ethnic Set",    image: "/p3.jpeg", price: "₹2499" },
+  { name: "Modern Co-ord Set",   image: "/p4.jpeg", price: "₹1899" },
+];
 
   return (
     <>
@@ -33,14 +33,15 @@ export default function Home() {
       <div style={{ fontFamily: "Georgia, serif", background: "#f5efe6" }}>
 
         {/* HEADER */}
-        <div style={{ textAlign: "center", padding: "30px" }}>
+<img src="/logo.png" />        
+<div style={{ textAlign: "center", padding: "30px" }}>
           <h1 style={{ fontSize: "40px", color: "#bfa46f" }}>Cotton Konnect</h1>
           <p style={{ letterSpacing: "2px" }}>LETS EXPERIENCE A NEW WAY OF SHOPPING</p>
         </div>
 
         {/* HERO BANNER */}
         <div style={{ textAlign: "center" }}>
-          <img src="/p1.jpg" style={{ width: "90%", borderRadius: "10px" }} alt="Hero" />
+          <img src="/p1.png" style={{ width: "90%", borderRadius: "10px" }} alt="Hero" />
         </div>
 
         {/* COUNTDOWN */}
