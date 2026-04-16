@@ -89,15 +89,23 @@ export default function Home() {
               href={`https://wa.me/919082780235?text=I want ${p.name}`}
               target="_blank"
             >
-              <button style={{
-                background: "#bfa46f",
-                color: "white",
-                border: "none",
-                padding: "10px",
-                cursor: "pointer"
-              }}>
-                Order on WhatsApp
-              </button>
+      <select id={`size-${i}`}>
+  <option>M</option>
+  <option>L</option>
+  <option>XL</option>
+  <option>XXL</option>
+</select>
+
+<button
+  onClick={() => {
+    const size = document.getElementById(`size-${i}`).value;
+    window.open(
+      `https://wa.me/919082780235?text=I want ${p.name} Size ${size}`
+    );
+  }}
+>
+  Order on WhatsApp
+</button>
             </a>
           </div>
         ))}
