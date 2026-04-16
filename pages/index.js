@@ -128,5 +128,15 @@ export default function Home() {
       </div>
 
     </div>
+<div style={{ padding: "40px", textAlign: "center" }}>
+  <h2>Book Exhibition Visit</h2>
+
+  <form action="https://formspree.io/f/your-id" method="POST">
+    <input placeholder="Your Name" name="name" required /><br/><br/>
+    <input placeholder="Phone Number" name="phone" required /><br/><br/>
+
+    <button type="submit">Book Slot</button>
+  </form>
+</div>
   );
 }
